@@ -15,20 +15,61 @@
 
 body {
     width: 100%;
-    background-color: var(--accent1-color);
+    height: 100vh;
     line-height: 1.6;
     color: var(--primary-color);
+    background: var(--accent2-color);
 }
 
 
+/*
+HOME ---------------------------
+*/
 
-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
+
+/*
+Header -------------------------
+*/
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 10px 25px;
+    justify-content: space-between;
     border-bottom: 2px solid var(--primary-color);
+    padding: 10px 25px;
+    background: var(--accent3-color);
+
 }
+
+.header-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 1px var(--accent2-color);
+}
+
+.header nav {
+    width: 65%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    align-self: self-end;
+}
+
+.header ul {
+    width: 100%;
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-links:hover {
+    text-decoration: underline var(--primary-color);
+}
+
 
 header img {
     width: 140px;
@@ -45,9 +86,158 @@ header nav a {
     color: var(--primary-color);
 }
 
-header nav a:hover {
-    text-decoration: underline;
+/*
+HOME
+
+HERO SECTION
+*/
+
+.hero-title {
+    font-size: 25px;
     color: var(--accent3-color);
+}
+
+
+
+.hero-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    align-items: center;
+    padding: 40px 0 40px 0;
+
+}
+
+.hero-section img {
+    width: 600px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 5px solid var(--accent3-color);
+}
+
+.hero-section img:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in;
+}
+
+.hero-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.hero-p {
+    color: var(--accent3-color);
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    width: 150px;
+    height: 35px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    background: var(--accent2-color);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.hero-button:hover {
+    background: var(--secondary-color);
+    color: var(--accent3-color);
+}
+
+/*
+ACTIVITIES SECTION
+*/
+
+.activities-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px 30px;
+    min-height: 300px;
+}
+
+.activities-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.activities-items span {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.activities-items img {
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    border: 10px solid var(--primary-color);
+}
+
+/*
+JOIN SECTION
+*/
+
+
+.join-section {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px 30px;
+}
+
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 40%;
+}
+
+.form-div p {
+    width: 400px;
+    margin-top: 20px;
+}
+
+.form-div form input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #556457;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
+.join-section img {
+
+    width: 600px;
+    border-radius: 5px;
+    border: 5px solid var(--primary-color);
+}
+
+.join-section button {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    background: var(--primary-color);
+    color: var(--accent3-color);
+    cursor: pointer;
 }
 
 
@@ -82,7 +272,7 @@ h2 {
 }
 
 h1 {
-    color: #C0DFA1;
+    color: var(--secondary-color);
     text-shadow: 2px 2px 1px black;
 }
 
@@ -97,7 +287,7 @@ h1 {
 .hero h1 {
     top: 30%;
     left: 5%;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .hero article {
@@ -144,7 +334,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--accent3-color);
 }
 
